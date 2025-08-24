@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom"
 const Welcome = () => {
   const navigate=useNavigate();
   return (
+    <>
+    <audio src="/sound.mp3" autoPlay loop hidden />
     <div className=" h-screen flex justify-center bg-cover "style={{ backgroundImage: "url('/bg.jpg')" }}>
-        <audio src="/sound.mp3" autoPlay loop hidden />
+        
       <div className="text-center space-y-4">
         <div>  
     <span className="flex justify-center">
@@ -25,11 +27,12 @@ const Welcome = () => {
         </p>
 
       
-        <button className="bg-blue-700 m-8 cursor-pointer hover:bg-red-700 transition-colors hover:scale-105 px-8 py-3 mt-[180px] rounded-2xl text-white font-semibold shadow-lg" onClick={()=>{navigate("/start")}}>
+        <button className="bg-blue-700  cursor-pointer hover:bg-red-700 transition-colors hover:scale-105 px-8 py-3 mt-[180px] rounded-2xl text-white font-semibold shadow-lg" onClick={()=>{navigate("/start")}}>
           Start Game
         </button>
       </div>
     </div>
+    </>
   )
 }
 
