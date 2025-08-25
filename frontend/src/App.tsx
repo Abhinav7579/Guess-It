@@ -12,8 +12,6 @@ function App() {
           <Route path="/" element={<Welcome/>} />
            <Route path="/start" element={<Start/>} />
            <Route path="/game/:roomId" element={<Game/>} />
-          
-    
         </Routes>
       </BrowserRouter>
  
